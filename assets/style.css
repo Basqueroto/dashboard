@@ -127,3 +127,14 @@ a {
     font-size: medium;
     margin: 20px;
 }
+
+/* Aqui começa o css da pagina de cadastro de produto */
+
+#data{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 5.5px;
+}
