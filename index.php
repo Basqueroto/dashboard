@@ -1,5 +1,6 @@
 <?php 
     include("config/cabecalho.php");
+    include("config/conexao.php");
 ?>    
     <div class="div-global">
 
