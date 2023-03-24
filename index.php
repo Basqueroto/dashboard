@@ -157,80 +157,30 @@
                                 <img src="img/tenis.PNG" alt="">
                                 Tênis
                             </button>
+                        </div>
 
-                            <div class="tabela-carrinho">
-                                <table border="1">
-                                    <th>ITEM</th>
-                                    <th>QTY</th>
-                                    <th>PREÇO</th>
-                                    <th>VALOR TOTAL</th>
-
+                        <div class="carrinho">
+                            <?php
+                                $query_product = "SELECT * FROM produto "; 
+                                $result_product = $conexao->prepare($query_product);
+                                $result_product->execute();   
+                                
+                                foreach ($result_product as $cliente ) : ?>
+                                <table>
                                     <tr>
-                                        <td><img src="img/camisetaEle.png" alt="">
-                                            <p>Elephant 1802</p>
-                                            <p>Item: #XDG-2347</p>
-                                        </td>
-                                        <td>X1</td>
-                                        <td>$72.00</td>
-                                        <td>$126.00</td>
+                                        <td><?php echo $cliente['nome']; ?></td>
                                     </tr>
-
                                     <tr>
-                                        <td><img src="img/camisetarosa.png" alt="">
-                                            <p>Red Laga</p>
-                                            <p>Item: #XDG-1321</p>
-                                        </td>
-                                        <td>X2</td>
-                                        <td>$45.00</td>
-                                        <td>$76.00</td>
+                                        <td><?php echo $cliente['quantidade']; ?></td>
                                     </tr>
-
                                     <tr>
-                                        <td><img src="img/camisetapreta.png" alt="">
-                                            <p>RiseUP</p>
-                                            <p>Item: #XDG-4312</p>
-                                        </td>
-                                        <td>X3</td>
-                                        <td>$84.00</td>
-                                        <td>$168.00</td>
+                                        <td><?php echo $cliente['preco']; ?></td>
                                     </tr>
-                                </table>
-                            </div>
+                                </table>   
+                            <?php endforeach; ?>           
                         </div>
                     </div>
-
-                        <button><img src="img/blusinha.PNG" alt=""></button>
-                        <p>Moda</p>
-                        <button><img src="img/game.PNG" alt=""></button>
-                        <p>Jogos</p>
-                        <button><img src="img/relogio.PNG" alt=""></button>
-                        <p>Eletrônicos</p>
-                        <button><img src="img/luvas.PNG" alt=""></button>
-                        <p>Esporte</p>
-                        <button><img src="img/tenis.PNG" alt=""></button>
-                        <p>Tênis</p>
-                </div>
-
-                <div class="carrinho">
-                <?php
-                    $query_product = "SELECT * FROM produto "; 
-                    $result_product = $conexao->prepare($query_product);
-                    $result_product->execute();   
-                    
-                     foreach ($result_product as $cliente ) : ?>
-                     <table>
-                        <tr>
-                            <td><?php echo $cliente['nome']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><?php echo $cliente['quantidade']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><?php echo $cliente['preco']; ?></td>
-                        </tr>
-                     </table>   
-                    <?php endforeach; ?>           
-
+                
                     <div class="aplicativo">
                         <h2>Novo aplicativo
                         de  E-commerce</h2>
@@ -244,39 +194,37 @@
                             <button>Ver Produtos</button>
                         </div>
                     </div>
-                </div>
                 
-                <div class="pedidos-vendas">
-                    <div class="pedidos">
-                        <div>
-                            <p>Pedidoa</p>
-                            <p>No último mês</p>
+                    <div class="pedidos-vendas">
+                        <div class="pedidos">
+                            <div>
+                                <p>Pedidoa</p>
+                                <p>No último mês</p>
+                            </div>
+
+                            <div>
+                                <button>Mais detalhes</button>
+                            </div>
                         </div>
 
-                        <div>
-                            <button>Mais detalhes</button>
+                        <div class="vendas">
+                            <div>
+                                <p>Vendas</p>
+                                <p>Total de 3450 vendas recentes</p>
+                            </div>
+
+                            <div>
+                                <table>
+                                    <th>Item</th>
+                                    <th>PRODUTO</th>
+                                    <th>DATA</th>
+                                    <th>PREÇO</th>
+                                    <th>STATUS</th>
+                                    <th>Qty</th>
+                                </table>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="vendas">
-                        <div>
-                            <p>Vendas</p>
-                            <p>Total de 3450 vendas recentes</p>
-                        </div>
-
-                        <div>
-                            <table>
-                                <th>Item</th>
-                                <th>PRODUTO</th>
-                                <th>DATA</th>
-                                <th>PREÇO</th>
-                                <th>STATUS</th>
-                                <th>Qty</th>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
             </main>
 
             <footer class="rodape">
