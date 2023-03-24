@@ -4,10 +4,14 @@ include("config/cabecalho.php");
 <div class="login">
     <div class="menu">
         <form class="imp" method="POST">
-            <input type="text" name="login" placeholder="login" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button class="cads">Login</button>
-            </form>
+            <div style="width: 100%;">
+                <h1>Logar</h1>
+                <input type="text" name="login" placeholder="login" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <button class="cads" type="submit">Login</button>
+                <a href="index.php"><button type="button">Voltar</button></a>
+            </div>
+        </form>
     </div>
 <?php
         //conectar com o banco de dados
@@ -28,7 +32,7 @@ include("config/cabecalho.php");
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($result){
-            echo"<div class = 'certo'>logou com sucesso</div>";
+            echo"<div class = 'sucess'>logou com sucesso</div>";
             session_start();
             $_SESSION['usuario'] = $result;
             header("Location: cadastrofornec.php");

@@ -47,3 +47,7 @@ include("config/cabecalho.php");
             $conexao = null;
         }
     ?>
+</div>
+<?php 
+    include("config/rodape.php");
+?>    
