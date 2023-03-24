@@ -1,6 +1,6 @@
 <?php 
     include("config/cabecalho.php");
-    include("config/conexao.php");
+    include("config/conexao.php")
 ?>    
     <div class="div-global">
 
@@ -28,6 +28,12 @@
                     <a href="">Aplicativos</a>
                     <a href="">Ajuda</a>
                 </nav>
+                <nav>
+                    <a href="cadastrouser.php">Criar conta</a>
+                    <a href="loginuser.php">entrar</a>
+                    <a href="cadastrofornec.php">cadastrar fornecedor</a>
+                    <a href="cadastroproduto.php">cadastrar produto</a>
+                </nav>
 
                 <form action="" method="POST">
                     <input type="text">
@@ -47,19 +53,40 @@
                     </div>
 
                     <div class="produtos-ativos">
-                        <p>345</p>
+                        <<?php        
+                            $query_produtos = "SELECT COUNT(id) AS p FROM produto";
+                            $result_produtos = $conexao->prepare($query_produtos);
+                            $result_produtos->execute();
+
+                            $row_produto = $result_produtos->fetch(PDO::FETCH_ASSOC);
+                            echo $row_produto['p'];
+                        ?>
                         <p>Produtos ativos</p>
                         <img src="img/Vector.png" alt="">
                     </div>
 
                     <div class="fornecedores">
-                        <p>25</p>
+                    <?php        
+                        $query_fornec= "SELECT COUNT(id) AS a FROM fornecedores";
+                        $result_fornec = $conexao->prepare($query_fornec);
+                        $result_fornec->execute();
+
+                        $row_fornec = $result_fornec->fetch(PDO::FETCH_ASSOC);
+                        echo $row_fornec['a'];
+                    ?>
                         <p>Fornecedores</p>
                         <img src="img/predio.png" alt="">
                     </div>
 
                     <div class="clientes">
-                        <p>4500</p>
+                    <?php        
+                            $query_client = "SELECT COUNT(id) AS c FROM usuarios";
+                            $result_client = $conexao->prepare($query_client);
+                            $result_client->execute();
+
+                            $row_client = $result_client->fetch(PDO::FETCH_ASSOC);
+                            echo $row_client['c'];
+                        ?>
                         <p>Clientes</p>
                         <img src="img/conta.png" alt="">
                     </div>

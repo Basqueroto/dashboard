@@ -10,7 +10,6 @@ include("config/cabecalho.php");
             <input type="number" name="cnpj" id="cnpj" placeholder="CNPJ" required="">
             <input type="email" name="email" id="email" placeholder="E-mail" required="">
             <input type="number" name="contato" id="contato" placeholder="Contato" required="">
-            <input type="password" name="senha" id="senha" placeholder="Senha" required="">
             <button class="cads" type="submit">Sign up</button>
             <a href="index.php"><button type="button">Voltar</button></a>
         </form>
