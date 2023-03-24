@@ -1,3 +1,80 @@
 .div-global {
     background-color: aqua;
 }
+
+/* Aqui começa o css da pagina de cadastro de usuario */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cad {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.signup {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+  
+.signup label {
+    display: none;
+}
+  
+.signup input[type="text"],
+.signup input[type="number"],
+.signup input[type="email"],
+.signup input[type="password"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 5.5px;
+}
+  
+.signup button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+  
+.signup button:hover {
+    background-color: #3e8e41;
+}
+  
+.sucess, .error {
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+  
+.sucess {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+  
+.error {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}

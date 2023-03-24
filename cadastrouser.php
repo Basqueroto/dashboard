@@ -2,10 +2,6 @@
 include("config/cabecalho.php");
 ?>
 <div id="cad">
-        <nav id="cad-nav">
-            <a href="index.php">Voltar</a>
-        </nav>
-    <input type="checkbox" id="chk" aria-hidden="true">
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
@@ -15,6 +11,7 @@ include("config/cabecalho.php");
             <input type="text" name="login" id="login" placeholder="login" required="">
             <input type="password" name="senha" id="senha" placeholder="Senha" required="">
             <button class="cads">Sign up</button>
+            <a href="index.php"><button>Voltar</button></a>
         </form>
     <?php
         include("config/conexao.php");
