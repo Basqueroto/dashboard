@@ -5,25 +5,62 @@
     <div class="div-global">
 
         <div class="div-menu-lateral">
-            <img src="img/logo-senai.png" alt="">
+            <img class="logo" src="img/logo-senai.png" alt="">
 
-            <button>Painel de controle</button>
-            <button>Usuários</button>
-            <button>Minha conta</button>
-            <button>Segurança</button>
-            <button>Corporativo</button>
-            <button>Esportes</button>
-            <button>Acadêmico</button>
-            <button>Relatórios</button>
-            <button>Custumozação</button>
-            <button>Alertas</button>
+            <button>
+                <img src="img/Frame.png" alt="">
+                Painel de controle
+            </button>
+
+            <button>
+                <img src="img/agenda.png" alt="">
+                Usuários
+            </button>
+
+            <button>
+                <img src="img/prisma.png" alt="">
+                Minha conta
+            </button>
+
+            <button>
+                <img src="img/conta2.png" alt="">
+                Segurança
+            </button>
+
+            <button>
+                <img src="img/pastinha.png" alt="">
+                Corporativo
+            </button>
+
+            <button>
+                <img src="img/bola.png" alt="">
+                Esportes
+            </button>
+
+            <button>
+                <img src="img/monumento.png" alt="">
+                Acadêmico
+            </button>
+
+            <button>
+                <img src="img/graficoPizza.png" alt="">
+                Relatórios
+            </button>
+            <button>
+                <img src="img/balde.png" alt="">
+                Custumozação
+            </button>
+            <button>
+                <img src="img/sino.png" alt="">
+                Alertas
+            </button>
         </div>
 
         <div class="div-conteudo">
 
             <header class="topo">
                 <nav>
-                    <a href="">Dashboards</a>
+                    <a class="dashboards" href="">Dashboards</a>
                     <a href="">Páginas</a>
                     <a href="">Aplicativos</a>
                     <a href="">Ajuda</a>
@@ -42,9 +79,8 @@
             </header>
 
             <main class="corpo">
-
+                <h1>E-commerce | Painel de Controle</h1>
                 <div class="painel-controle">
-                    <h1>E-commerce | Painel de Controle</h1>
 
                     <div class="vendas-mes">
                         <p>aqui vai ser o valor</p>
