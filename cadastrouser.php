@@ -2,6 +2,12 @@
 include("config/cabecalho.php");
 ?>
 <div id="cad">
+<<<<<<< HEAD
+=======
+        <nav id="cad-nav">
+            <a href="index.php">Voltar</a>
+        </nav>
+>>>>>>> 3e11d18eb4d21e899b21e387b619d3ba39db12b8
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>

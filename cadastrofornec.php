@@ -5,33 +5,39 @@ include("config/cabecalho.php");
         <nav id="cad-nav">
             <a href="index.php">Voltar</a>
         </nav>
-    <input type="checkbox" id="chk" aria-hidden="true">
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
             <input type="text" name="nome" id="nome" placeholder="Nome" required="">
-            <input type="number" name="cpf" id="cpf" placeholder="CPF" required="">
+            <input type="text" name="razao" id="razao" placeholder="razão social" required="">
+            <input type="number" name="cnpj" id="cnpj" placeholder="cnpj" required="">
             <input type="email" name="email" id="email" placeholder="Email" required="">
-            <input type="text" name="login" id="login" placeholder="login" required="">
+            <input type="number" name="contato" id="contato" placeholder="contato" required="">
             <input type="password" name="senha" id="senha" placeholder="Senha" required="">
             <button class="cads">Sign up</button>
         </form>
     <?php
         include("config/conexao.php");
+
+        session_start();
+
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $nome = $_POST["nome"];
-            $cpf = $_POST["cpf"];
+            $razao = $_POST["razao"];
+            $cnpj = $_POST["cnpj"];
             $email = $_POST["email"];
-            $login = $_POST["login"];
-            $senha = $_POST["senha"];
+            $contato = $_POST["contato"];
+            $idUsuario = $_SESSION['usuario']['id'];
+            echo $idUsuario;
 
-            $sql ="INSERT INTO usuarios (nome, cpf, email, login, senha) VALUES (:nome, :cpf, :email, :login, :senha) ";
+            $sql ="INSERT INTO fornecedores (nome, razao_social, cnpj, email, contato, idUsuario) VALUES (:nome, :razao, :cnpj, :email, :contato, :idUsuario) ";
             $stmt = $conexao->prepare($sql);
             $stmt->bindValue(":nome", $nome);
-            $stmt->bindValue(":cpf", $cpf);
+            $stmt->bindValue(":razao", $razao);
+            $stmt->bindValue(":cnpj", $cnpj);
             $stmt->bindValue(":email", $email);
-            $stmt->bindValue(":login", $login);
-            $stmt->bindValue(":senha", $senha);
+            $stmt->bindValue(":contato", $contato);
+            $stmt->bindValue(":idUsuario", $idUsuario);
             $stmt->execute();
 
             if($stmt->rowCount() > 0){
