@@ -1,8 +1,8 @@
-.div-global {
-    background-color: aqua;
+:root {
+    --cor--pretoClaro: #1E1E2D;
+    --cor--corpo: #F5F5F5;
+    
 }
-
-/* Aqui começa o css da pagina de cadastro de usuario */
 
 *{
     margin: 0px;
@@ -10,6 +10,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* Aqui começa o css da pagina de cadastro de usuario */
 a {
     text-decoration: none;
 }
@@ -77,4 +79,20 @@ a {
     background-color: #f2dede;
     border: 1px solid #ebccd1;
     color: #a94442;
+}
+
+
+/* aqui começa css do index */
+.div-global{
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+}
+
+.div-menu-lateral{
+    margin: 15px;
+}
+.div-menu-lateral button{
+    display: flex;
+    border: none;
+
 }

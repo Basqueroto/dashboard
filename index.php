@@ -5,7 +5,7 @@
     <div class="div-global">
 
         <div class="div-menu-lateral">
-            <img src="img/img/senai-logo1.png" alt="">
+            <img src="img/logo-senai.png" alt="">
 
             <button>Painel de controle</button>
             <button>Usuários</button>
