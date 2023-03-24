@@ -1,3 +1,6 @@
+<?php
+include("config/cabecalho.php");
+?>
 <div class="login">
     <div class="menu">
         <form class="imp" method="POST">
