@@ -5,7 +5,6 @@ include("config/cabecalho.php");
         <nav id="cad-nav">
             <a href="index.php">Voltar</a>
         </nav>
-    <input type="checkbox" id="chk" aria-hidden="true">
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
