@@ -10,8 +10,8 @@ include("config/cabecalho.php");
             <input type="email" name="email" id="email" placeholder="E-mail" required="">
             <input type="text" name="login" id="login" placeholder="Login" required="">
             <input type="password" name="senha" id="senha" placeholder="Senha" required="">
-            <button class="cads">Sign up</button>
-            <a href="index.php"><button>Voltar</button></a>
+            <button class="cads" type="submit">Sign up</button>
+            <a href="index.php"><button type="button">Voltar</button></a>
         </form>
     <?php
         include("config/conexao.php");
