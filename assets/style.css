@@ -1,10 +1,9 @@
-/* Aqui começa o css da pagina de cadastro de usuario */
-
 :root {
     --cor--pretoClaro: #1E1E2D;
     --cor--corpo: #F5F5F5;
 }
 
+/* Aqui começa o css da pagina de cadastro de usuario */
 *{
     margin: 0px;
     padding: 0px;
@@ -37,10 +36,7 @@ a {
     display: none;
 }
   
-.signup input[type="text"],
-.signup input[type="number"],
-.signup input[type="email"],
-.signup input[type="password"] {
+.signup input{
     display: block;
     margin-bottom: 10px;
     width: 100%;
@@ -171,13 +167,62 @@ a {
 
 /* Aqui começa o css da pagina de login */
 
-.login .menu{
+.menu{
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu input{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 5.5px;
+}
+
+.menu button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.menu button:hover {
+    background-color: #3e8e41;
+}
+
+.menu .imp{
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     padding: 20px;
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
 
+.menu h1{
+    font-size: medium;
+    margin: 20px;
+}
+
+/* Aqui começa o css da pagina de cadastro de produto */
+
+#data{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 5.5px;
 }
 
 .vendas-mes{

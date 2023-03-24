@@ -2,9 +2,6 @@
 include("config/cabecalho.php");
 ?>
 <div id="cad">
-        <nav id="cad-nav">
-            <a href="index.php">Voltar</a>
-        </nav>
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
@@ -16,6 +13,7 @@ include("config/cabecalho.php");
             <input type="text" name="fornec" id="fornec" placeholder="razão social do fornecedor" required="">
             <input type="text" name="estado" id="estato" placeholder="estado" required="">
             <button class="cads">Sign up</button>
+            <a href="index.php"><button type="button">Voltar</button></a>
         </form>
     <?php
         include("config/conexao.php");

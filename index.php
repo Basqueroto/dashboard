@@ -1,6 +1,6 @@
 <?php 
     include("config/cabecalho.php");
-    include("config/conexao.php");
+    include("config/conexao.php")
 ?>    
     <div class="div-global">
 
@@ -65,6 +65,12 @@
                     <a href="">Aplicativos</a>
                     <a href="">Ajuda</a>
                 </nav>
+                <nav>
+                    <a href="cadastrouser.php">Criar conta</a>
+                    <a href="loginuser.php">entrar</a>
+                    <a href="cadastrofornec.php">cadastrar fornecedor</a>
+                    <a href="cadastroproduto.php">cadastrar produto</a>
+                </nav>
 
                 <form action="" method="POST">
                     <input type="text">
@@ -85,27 +91,47 @@
                     </div>
 
                     <div class="produtos-ativos">
-                        <p>345</p>
+                        <<?php        
+                            $query_produtos = "SELECT COUNT(id) AS p FROM produto";
+                            $result_produtos = $conexao->prepare($query_produtos);
+                            $result_produtos->execute();
+
+                            $row_produto = $result_produtos->fetch(PDO::FETCH_ASSOC);
+                            echo $row_produto['p'];
+                        ?>
                         <p>Produtos ativos</p>
                         <img src="img/Vector.png" alt="">
                     </div>
 
                     <div class="fornecedores">
-                        <p>25</p>
+                    <?php        
+                        $query_fornec= "SELECT COUNT(id) AS a FROM fornecedores";
+                        $result_fornec = $conexao->prepare($query_fornec);
+                        $result_fornec->execute();
+
+                        $row_fornec = $result_fornec->fetch(PDO::FETCH_ASSOC);
+                        echo $row_fornec['a'];
+                    ?>
                         <p>Fornecedores</p>
                         <img src="img/predio.png" alt="">
                     </div>
 
                     <div class="clientes">
-                        <p>4500</p>
+                    <?php        
+                            $query_client = "SELECT COUNT(id) AS c FROM usuarios";
+                            $result_client = $conexao->prepare($query_client);
+                            $result_client->execute();
+
+                            $row_client = $result_client->fetch(PDO::FETCH_ASSOC);
+                            echo $row_client['c'];
+                        ?>
                         <p>Clientes</p>
                         <img src="img/conta.png" alt="">
                     </div>
 
                 </div>
 
-                <div class="carrinho">
-                    <div class="carrinho-ativo">
+                <div class="carrinho-ativo">
                         <h4>Carrinhos ativos</h4>
 
                         <div class="grid">
@@ -173,6 +199,38 @@
                         </div>
                     </div>
 
+                        <button><img src="img/blusinha.PNG" alt=""></button>
+                        <p>Moda</p>
+                        <button><img src="img/game.PNG" alt=""></button>
+                        <p>Jogos</p>
+                        <button><img src="img/relogio.PNG" alt=""></button>
+                        <p>Eletrônicos</p>
+                        <button><img src="img/luvas.PNG" alt=""></button>
+                        <p>Esporte</p>
+                        <button><img src="img/tenis.PNG" alt=""></button>
+                        <p>Tênis</p>
+                </div>
+
+                <div class="carrinho">
+                <?php
+                    $query_product = "SELECT * FROM produto "; 
+                    $result_product = $conexao->prepare($query_product);
+                    $result_product->execute();   
+                    
+                     foreach ($result_product as $cliente ) : ?>
+                     <table>
+                        <tr>
+                            <td><?php echo $cliente['nome']; ?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $cliente['quantidade']; ?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $cliente['preco']; ?></td>
+                        </tr>
+                     </table>   
+                    <?php endforeach; ?>           
+
                     <div class="aplicativo">
                         <h2>Novo aplicativo
                         de  E-commerce</h2>
@@ -229,4 +287,4 @@
     </div>
 <?php 
     include("config/rodape.php");
-?>    
+?>
