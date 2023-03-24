@@ -136,9 +136,9 @@ a {
 }
 
 .painel-controle {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;   
+    grid-template-columns: repeat(4, 1fr);   
 }
 
 .painel-controle img{
@@ -154,17 +154,19 @@ a {
 .fornecedores,
 .clientes{
     background-color: white;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .vendas-mes{
-    background-color: #4CAF50;
-    padding: 10px;
+    background: linear-gradient(180deg, rgba(92, 78, 78, 0) 0%, rgba(40, 206, 86, 0.37) 100%);
+    filter: drop-shadow(10px 11px 15px rgba(76, 87, 125, 0.15));
 }
 
-.vendas-mes i{
+/* .vendas-mes i{
     font-size: 35px;
-}
+} */
+
+
 
 
 /* Aqui começa o css da pagina de login */
@@ -176,4 +178,33 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     padding: 20px;
 
+}
+
+.vendas-mes{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.painel-controle div{
+    width: 90%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+
+.grid button {
+    cursor: pointer;
+}
+
+.grid button img{
+    display: block;
+    margin: 0 auto !important;
+}
+
+.grid button div{
+    margin: 0 auto;
 }
