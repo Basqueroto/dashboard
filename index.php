@@ -129,8 +129,7 @@
 
                 </div>
 
-                <div class="carrinho">
-                    <div class="carrinho-ativo">
+                <div class="carrinho-ativo">
                         <h4>Carrinhos ativos</h4>
                         <button><img src="img/blusinha.PNG" alt=""></button>
                         <p>Moda</p>
@@ -142,75 +141,27 @@
                         <p>Esporte</p>
                         <button><img src="img/tenis.PNG" alt=""></button>
                         <p>Tênis</p>
+                </div>
 
-                        <table>
-                            <tr>
-                                <td>Item</td>
-                                <td>QTY</td>
-                                <td>Preço</td>
-                                <td>Valor total</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="img/camisetaEle.png" alt="">
-                                        <p>Elephant 1802</p>
-                                        <p>Item: #XDG-2347</p>
-                                        
-                                    </div>
-                                    <div>
-                                        <img src="img/camisetarosa.png" alt="">
-                                        <p>Red Laga</p>
-                                        <p>Item:#XDG-1321</p>
-                                    </div>
-                                
-                                    <div>
-                                        <img src="img/camisetapreta.png" alt="">
-                                        <p>RiseUP</p>
-                                        <p>Item:#XDG-4312</p>
-                                        
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <p>X1</p>
-                                    </div>
-                                    <div>
-                                        <p>X2</p>
-                                    </div>
-                                
-                                    <div>
-                                        <p>X3</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <p>$72.00</p>
-                                    </div>
-                                    <div>
-                                        <p>$45.00</p>
-                                    </div>
-                                
-                                    <div>
-                                        <p>$84.00</p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <p>$126.00</p>
-                                    </div>
-                                    <div>
-                                        <p>$76.00</p>
-                                    </div>
-                                
-                                    <div>
-                                        <p>$168.00</p>
-                                    </div>
-                                </td>
-                            </tr>     
-
-                        </table>
-                    </div>
+                <div class="carrinho">
+                <?php
+                    $query_product = "SELECT * FROM produto "; 
+                    $result_product = $conexao->prepare($query_product);
+                    $result_product->execute();   
+                    
+                     foreach ($result_product as $cliente ) : ?>
+                     <table>
+                        <tr>
+                            <td><?php echo $cliente['nome']; ?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $cliente['quantidade']; ?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $cliente['preco']; ?></td>
+                        </tr>
+                     </table>   
+                    <?php endforeach; ?>           
 
                     <div class="novo-aplicativo">
                         <h3>Novo aplicativo</h3>
@@ -472,4 +423,4 @@
     </div>
 <?php 
     include("config/rodape.php");
-?>    
+?>
