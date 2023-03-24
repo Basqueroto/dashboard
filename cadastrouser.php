@@ -2,19 +2,13 @@
 include("config/cabecalho.php");
 ?>
 <div id="cad">
-<<<<<<< HEAD
-=======
-        <nav id="cad-nav">
-            <a href="index.php">Voltar</a>
-        </nav>
->>>>>>> 3e11d18eb4d21e899b21e387b619d3ba39db12b8
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
             <input type="text" name="nome" id="nome" placeholder="Nome" required="">
             <input type="number" name="cpf" id="cpf" placeholder="CPF" required="">
-            <input type="email" name="email" id="email" placeholder="Email" required="">
-            <input type="text" name="login" id="login" placeholder="login" required="">
+            <input type="email" name="email" id="email" placeholder="E-mail" required="">
+            <input type="text" name="login" id="login" placeholder="Login" required="">
             <input type="password" name="senha" id="senha" placeholder="Senha" required="">
             <button class="cads">Sign up</button>
             <a href="index.php"><button>Voltar</button></a>

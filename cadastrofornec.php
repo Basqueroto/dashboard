@@ -2,19 +2,17 @@
 include("config/cabecalho.php");
 ?>
 <div id="cad">
-        <nav id="cad-nav">
-            <a href="index.php">Voltar</a>
-        </nav>
     <div class="signup">
         <form class="imp" method="POST">
             <label for="chk" aria-hidden="true">Cadastre-se</label>
             <input type="text" name="nome" id="nome" placeholder="Nome" required="">
-            <input type="text" name="razao" id="razao" placeholder="razão social" required="">
-            <input type="number" name="cnpj" id="cnpj" placeholder="cnpj" required="">
-            <input type="email" name="email" id="email" placeholder="Email" required="">
-            <input type="number" name="contato" id="contato" placeholder="contato" required="">
+            <input type="text" name="razao" id="razao" placeholder="Razão Social" required="">
+            <input type="number" name="cnpj" id="cnpj" placeholder="CNPJ" required="">
+            <input type="email" name="email" id="email" placeholder="E-mail" required="">
+            <input type="number" name="contato" id="contato" placeholder="Contato" required="">
             <input type="password" name="senha" id="senha" placeholder="Senha" required="">
             <button class="cads">Sign up</button>
+            <a href="index.php"><button>Voltar</button></a>
         </form>
     <?php
         include("config/conexao.php");
