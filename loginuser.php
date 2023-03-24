@@ -28,7 +28,7 @@
                 echo"<div class = 'certo'>logou com sucesso</div>";
                 session_start();
                 $_SESSION['usuario'] = $result;
-                header("Location: index.php");
+                header("Location: cadastrofornec.php");
             }
             else {
                 echo"<div class = 'error'>falha em logar o usuário</div>";

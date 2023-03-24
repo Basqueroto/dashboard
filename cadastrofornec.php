@@ -27,7 +27,8 @@ include("config/cabecalho.php");
             $cnpj = $_POST["cnpj"];
             $email = $_POST["email"];
             $contato = $_POST["contato"];
-            $idUsuario = $_SESSION['usuario']['idUsuario'];
+            $idUsuario = $_SESSION['usuario']['id'];
+            echo $idUsuario;
 
             $sql ="INSERT INTO fornecedores (nome, razao_social, cnpj, email, contato, idUsuario) VALUES (:nome, :razao, :cnpj, :email, :contato, :idUsuario) ";
             $stmt = $conexao->prepare($sql);
