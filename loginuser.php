@@ -1,10 +1,13 @@
+<?php
+include("config/cabecalho.php");
+?>
 <div class="login">
-    <div class="menu">
+    <div class="signup">
         <form class="imp" method="POST">
-            <input type="text" name="login" placeholder="login" required="">
-            <input type="password" name="senha" placeholder="Senha" required="">
+            <input type="text" name="login" placeholder="login" required>
+            <input type="password" name="senha" placeholder="Senha" required>
             <button class="cads">Login</button>
-            </form>
+        </form>
     </div>
     <?php
         //conectar com o banco de dados
